@@ -5,6 +5,8 @@ import org.testng.annotations.BeforeMethod;
 
 import java.util.Properties;
 
+import static utils.RestClient.authorizeUser;
+
 public class BaseTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseTest.class);
@@ -13,5 +15,8 @@ public class BaseTest {
     @BeforeMethod
     public void beforeTest(){
         LOGGER.info("{} properties were initialized", properties.size());
+        authorizeUser();
     }
+
+
 }

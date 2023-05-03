@@ -17,7 +17,8 @@ ext.depVersions =[
         gsonVer: '2.10.1',
         restassuredVer: '5.3.0',
         jsonVer : '20220924',
-        lomVer : '1.18.20.0'
+        lomVer : '1.18.20.0',
+        assertjVer: '3.24.2'
 ]
 
 dependencies {
@@ -28,6 +29,8 @@ dependencies {
     implementation group: 'io.rest-assured', name: 'rest-assured', version: depVersions.restassuredVer
     implementation group: 'org.json', name: 'json', version: depVersions.jsonVer
     compileOnly group: 'org.projectlombok', name: 'lombok-maven-plugin', version: depVersions.lomVer
+    implementation group: 'org.assertj', name: 'assertj-core', version: depVersions.assertjVer
+
 }
 
 tasks.withType(JavaCompile).configureEach { task ->
